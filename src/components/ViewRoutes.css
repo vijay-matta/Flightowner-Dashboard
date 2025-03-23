@@ -1,0 +1,166 @@
+.view-routes-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e9ecef;
+}
+
+.view-routes-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 1rem;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.input-container label {
+    font-weight: 500;
+    color: #34495e;
+    min-width: 200px;
+}
+
+.input-container input {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.input-container button {
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: #2980b9;
+}
+
+.input-container button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #f5c6cb;
+}
+
+.routes-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.routes-table thead {
+    background-color: #f8f9fa;
+}
+
+.routes-table th {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid #e9ecef;
+    color: #495057;
+    font-weight: 600;
+}
+
+.routes-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #344767;
+}
+
+.routes-table tr:last-child td {
+    border-bottom: none;
+}
+
+.routes-table tr:hover {
+    background-color: #f1f3f5;
+    transition: background-color 0.3s ease;
+}
+
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+  }
+.edit-button, .delete-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+  }
+  
+
+@media (max-width: 768px) {
+    .view-routes-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .input-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-container label {
+        margin-bottom: 0.5rem;
+        min-width: auto;
+    }
+
+    .routes-table {
+        font-size: 0.9rem;
+    }
+
+    .routes-table th,
+    .routes-table td {
+        padding: 0.75rem;
+    }
+}

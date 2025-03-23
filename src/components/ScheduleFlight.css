@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #f3f4f6;
+    --text-color: #1f2937;
+    --border-color: #d1d5db;
+    --background-color: #ffffff;
+    --hover-color: #1d4ed8;
+  }
+  
+  .schedule-flight-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--background-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+  }
+  
+  .schedule-flight-container h2 {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+  
+  .schedule-flight-container form > div {
+    margin-bottom: 1rem;
+  }
+  
+  .schedule-flight-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+  }
+  
+  .schedule-flight-container input[type="text"],
+  .schedule-flight-container input[type="number"],
+  .schedule-flight-container input[type="date"],
+  .schedule-flight-container input[type="time"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .schedule-flight-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+  
+  .schedule-flight-container input[type="checkbox"] {
+    margin-left: 0.5rem;
+    transform: scale(1.25);
+  }
+  
+  .schedule-flight-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .schedule-flight-container button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-flight-container h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .schedule-flight-container {
+      width: 95%;
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+  
+    .schedule-flight-container input[type="text"],
+    .schedule-flight-container input[type="number"],
+    .schedule-flight-container input[type="date"],
+    .schedule-flight-container input[type="time"] {
+      padding: 0.5rem;
+    }
+  }

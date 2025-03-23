@@ -1,0 +1,82 @@
+/* EditFlight Component Styles */
+.edit-flight-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .edit-flight-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.875rem;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #357abd;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .edit-flight-container {
+      width: 95%;
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+  }
+  
+  /* Utility Classes */
+  .form-group input[type="date"],
+  .form-group input[type="time"] {
+    cursor: pointer;
+  }
+  
+  /* Error and Loading States */
+  p {
+    text-align: center;
+    color: #666;
+    margin: 2rem 0;
+  }

@@ -1,0 +1,142 @@
+/* Modern, Clean Styling for Flight Bookings */
+.flightowner-bookings-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .flightowner-bookings-container h2 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  .bookings-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .bookings-table thead {
+    background-color: #f7f9fc;
+  }
+  
+  .bookings-table th {
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-bottom: 2px solid #2980b9;
+  }
+  
+  .bookings-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e4e8;
+    color: #2c3e50;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bookings-table tr:nth-child(even) {
+    background-color: #f1f5f9;
+  }
+  
+  .bookings-table tr:hover {
+    background-color: #e6f2ff;
+  }
+  
+  .error-container {
+    background-color: #fff5f5;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .error-message {
+    color: #c0392b;
+    margin-bottom: 15px;
+    font-weight: 500;
+  }
+  
+  .error-container button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .error-container button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1024px) {
+    .bookings-table {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .bookings-table {
+      border-radius: 0;
+    }
+    
+    .bookings-table, 
+    .bookings-table tbody, 
+    .bookings-table tr, 
+    .bookings-table td, 
+    .bookings-table th {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .bookings-table thead {
+      display: none;
+    }
+  
+    .bookings-table tr {
+      margin-bottom: 10px;
+      border: 1px solid #e0e4e8;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  
+    .bookings-table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: right;
+    }
+  
+    .bookings-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      text-align: left;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  }
