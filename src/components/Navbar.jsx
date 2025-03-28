@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { View, Plane, Route, Calendar, Bell, User, Settings, Menu } from 'lucide-react';
-import { Card } from './Card';  // Import your custom Card component
+import { Plane, Bell, User, Settings, Menu } from 'lucide-react';
+import DashboardTiles from './DashboardTiles'; // Import our new grid component
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css';
 
@@ -48,23 +48,23 @@ const FlightOwnerDashboard = () => {
     <div className="dashboard-container">
       {/* Login Success Modal */}
       {showLoginSuccessCard && (
-  <div className="login-success-modal">
-    <div 
-      className="login-success-content"
-      style={{
-        position: 'fixed', 
-        top: '50%', 
-        left: '50%', 
-        transform: 'translate(-50%, -50%)',
-        zIndex: 1000
-      }}
-    >
-      <h2>Login Successful!</h2>
-      {userInfo?.username && <p>Welcome, {userInfo.username}</p>}
-      {userInfo?.flightOwnerId && <p>Your unique Flight Owner ID is: {userInfo.flightOwnerId}</p>}
-    </div>
-  </div>
-)}
+        <div className="login-success-modal">
+          <div 
+            className="login-success-content"
+            style={{
+              position: 'fixed', 
+              top: '50%', 
+              left: '50%', 
+              transform: 'translate(-50%, -50%)',
+              zIndex: 1000
+            }}
+          >
+            <h2>Login Successful!</h2>
+            {userInfo?.username && <p>Welcome, {userInfo.username}</p>}
+            {userInfo?.flightOwnerId && <p>Your unique Flight Owner ID is: {userInfo.flightOwnerId}</p>}
+          </div>
+        </div>
+      )}
 
       {/* Navbar */}
       <nav className="dashboard-navbar">
@@ -113,49 +113,13 @@ const FlightOwnerDashboard = () => {
       </nav>
 
       {/* Banner Image */}
-      <div className="banner-image">
+      {/*<div className="banner-image">
         <img src="https://th.bing.com/th/id/OIP.A2ofr2IOaJvIWlkus5_R4QHaFF?w=259&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Flight Owner Banner" />
       </div>
+      */}
 
-      {/* Horizontal Scrolling Containers with Cards */}
-      <div className="icons-container">
-        <Card className="icon-card">
-          <View size={40} />
-          <Link to="/view-flights">View Flights</Link>
-        </Card>
-        <Card className="icon-card">
-          <View size={40} />
-          <Link to="/view-flights">View Flights</Link>
-        </Card>
-        <Card className="icon-card">
-          <View size={40} />
-          <Link to="/view-flights">View Flights</Link>
-        </Card>
-        <Card className="icon-card">
-          <Plane size={40} />
-          <Link to="/schedule-flights">Schedule Flights</Link>
-        </Card>
-        <Card className="icon-card">
-          <Route size={40} />
-          <Link to="/view-routes">View Routes</Link>
-        </Card>
-        <Card className="icon-card">
-          <Calendar size={40} />
-          <Link to="/schedule-routes">Schedule Routes</Link>
-        </Card>
-        <Card className="icon-card">
-          <Calendar size={40} />
-          <Link to="/flight-owner-bookings">Booking History</Link>
-        </Card>
-        <Card className="icon-card">
-          <Calendar size={40} />
-          <Link to="/cancelled-booking-history">Cancelled Booking History</Link>
-        </Card>
-        <Card className="icon-card">
-          <Calendar size={40} />
-          <Link to="/schedule-routes">Issue Refund</Link>
-        </Card>
-      </div>
+      {/* Our new Dashboard Tiles Grid */}
+      <DashboardTiles />
 
       {/* Footer */}
       <footer className="footer">

@@ -38,7 +38,7 @@ const FlightOwnerBookings = () => {
 
         // Fetch Flight Owner ID
         const flightOwnerIdResponse = await axios.get(
-          `https://localhost:7294/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
+          `https://localhost:7275/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
           {
             headers: {
               'Authorization': `Bearer ${authToken}`
@@ -51,7 +51,7 @@ const FlightOwnerBookings = () => {
 
         // Fetch bookings for the flight owner
         const bookingsResponse = await axios.get(
-          `https://localhost:7294/api/FlightOwner/GetBookingsByFlightOwner/${fetchedFlightOwnerId}`,
+          `https://localhost:7275/api/FlightOwner/GetBookingsByFlightOwner/${fetchedFlightOwnerId}`,
           {
             headers: {
               'Authorization': `Bearer ${authToken}`

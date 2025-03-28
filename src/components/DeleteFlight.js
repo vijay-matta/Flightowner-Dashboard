@@ -17,7 +17,7 @@ const DeleteFlight = () => {
   const handleCancelFlight = async () => {
     try {
       await axios.put(
-        `https://localhost:7294/api/FlightOwner/CancelFlight/${flight.flightNumber}`
+        `https://localhost:7275/api/FlightOwner/CancelFlight/${flight.flightNumber}`
       );
       alert("Flight status updated to Cancelled.");
       navigate("/view-flights"); // Redirect back
@@ -30,7 +30,7 @@ const DeleteFlight = () => {
   const handleDeleteFlight = async () => {
     try {
       await axios.delete(
-        `https://localhost:7294/api/FlightOwner/DeleteFlight/${flight.flightNumber}`
+        `https://localhost:7275/api/FlightOwner/DeleteFlight/${flight.flightNumber}`
       );
       alert("Flight deleted successfully.");
       navigate("/view-flights"); // Redirect back

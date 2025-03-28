@@ -43,7 +43,7 @@ const EditFlight = () => {
     const fetchFlightDetails = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:7294/api/FlightOwner/GetFlight/${flightId}`,
+          `https://localhost:7275/api/FlightOwner/GetFlight/${flightId}`,
           {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -136,7 +136,7 @@ const EditFlight = () => {
 
     try {
       const response = await axios.put(
-        `https://localhost:7294/api/FlightOwner/UpdateFlight/${updatedFlightDetails.flightNumber}`, 
+        `https://localhost:7275/api/FlightOwner/UpdateFlight/${updatedFlightDetails.flightNumber}`, 
         updatedFlightDetails,
         {
           headers: {

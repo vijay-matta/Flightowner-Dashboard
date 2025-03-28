@@ -15,7 +15,7 @@ const Flights = () => {
     try {
       setError(""); // Clear any existing errors
       const response = await axios.get(
-        `https://localhost:7294/api/FlightOwner/GetAllFlights/${flightOwnerId}`
+        `https://localhost:7275/api/FlightOwner/GetAllFlights/${flightOwnerId}`
       );
       setFlights(response.data); // Assuming the backend returns an array of flights
     } catch (err) {

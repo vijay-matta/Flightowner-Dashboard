@@ -29,7 +29,7 @@ const EditRoute = () => {
 
                 // Fetch full route details
                 const response = await axios.get(
-                    `https://localhost:7294/api/FlightOwner/GetRouteDetails/${routeId}`,
+                    `https://localhost:7275/api/FlightOwner/GetRouteDetails/${routeId}`,
                     {
                         headers: {
                             'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -92,7 +92,7 @@ const EditRoute = () => {
             }
 
             const response = await axios.put(
-                `https://localhost:7294/api/FlightOwner/UpdateRoute/${routeId}`, 
+                `https://localhost:7275/api/FlightOwner/UpdateRoute/${routeId}`, 
                 routeData,
                 {
                     headers: {

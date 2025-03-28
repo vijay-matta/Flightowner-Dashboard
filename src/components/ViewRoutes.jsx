@@ -37,7 +37,7 @@ const ViewAllRoutes = () => {
 
         // Fetch Flight Owner ID using username
         const response = await axios.get(
-          `https://localhost:7294/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
+          `https://localhost:7275/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
           {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -66,7 +66,7 @@ const ViewAllRoutes = () => {
     setError("");
 
     try {
-      const response = await axios.get(`https://localhost:7294/api/FlightOwner/GetAllRoutes/${id}`);
+      const response = await axios.get(`https://localhost:7275/api/FlightOwner/GetAllRoutes/${id}`);
       if (Array.isArray(response.data)) {
         setRoutes(response.data);
       } else {

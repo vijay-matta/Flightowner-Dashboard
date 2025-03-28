@@ -32,7 +32,7 @@ const Flights = () => {
 
         // Fetch Flight Owner ID using username
         const response = await axios.get(
-          `https://localhost:7294/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
+          `https://localhost:7275/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
           {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -60,7 +60,7 @@ const Flights = () => {
       setError("");
       setIsLoading(true);
       const response = await axios.get(
-        `https://localhost:7294/api/FlightOwner/GetAllFlights/${id}`
+        `https://localhost:7275/api/FlightOwner/GetAllFlights/${id}`
       );
       setFlights(response.data);
       console.log("API Response: ", response.data); // Debugging line

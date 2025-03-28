@@ -1,0 +1,118 @@
+/* DashboardTiles.css */
+.dashboard-tiles-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 1rem;
+  }
+  
+  .tiles-section-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .tile-item {
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .tile-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #2c3e50;
+    height: 200px;
+    padding: 2rem 1.5rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .tile-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tile-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tile-link:hover .tile-icon {
+    transform: scale(1.1);
+  }
+  
+  .tile-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .tile-link:hover .tile-title {
+    color: #3498db;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .dashboard-tiles-container {
+      width: 95%;
+      padding: 0.5rem;
+    }
+    
+    .tiles-grid {
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+    
+    .tile-link {
+      height: 170px;
+      padding: 1.25rem 1rem;
+    }
+    
+    .tile-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    
+    .tile-title {
+      font-size: 1rem;
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 400px) {
+    .tiles-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tile-link {
+      height: 150px;
+    }
+  }

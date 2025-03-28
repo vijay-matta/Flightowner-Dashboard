@@ -112,7 +112,7 @@ const ScheduleFlight = () => {
   
     try {
         const payload = { ...formData,flightStatus: Number(formData.flightStatus), ...calculatedSeats };
-      const response = await axios.post("https://localhost:7294/api/FlightOwner/ScheduleFlight", payload);
+      const response = await axios.post("https://localhost:7275/api/FlightOwner/ScheduleFlight", payload);
       alert("Flight scheduled successfully!");
       console.log("Response Data:", response.data);
     } catch (error) {

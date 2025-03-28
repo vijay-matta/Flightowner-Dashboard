@@ -99,7 +99,7 @@ const RegistrationPage = () => {
   
       console.log('Sending registration data:', registrationData);
   
-      const response = await axios.post('https://localhost:7294/api/Login/register', registrationData, {
+      const response = await axios.post('https://localhost:7275/api/FlightOwnerLogin/register', registrationData, {
         headers: {
           'Content-Type': 'application/json'
         }

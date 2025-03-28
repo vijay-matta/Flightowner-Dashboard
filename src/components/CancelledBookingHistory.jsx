@@ -36,7 +36,7 @@ const CancelledBookingHistory = () => {
   
         // Fetch Flight Owner ID
         const flightOwnerIdResponse = await axios.get(
-          `https://localhost:7294/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
+          `https://localhost:7275/api/UserProfile/GetFlightOwnerIdByUsername/${storedUsername}`,
           {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('authToken')}`
@@ -56,7 +56,7 @@ const CancelledBookingHistory = () => {
 
         // Fetch cancelled bookings using the Flight Owner ID
         const cancelledBookingsResponse = await axios.get(
-          `https://localhost:7294/api/FlightOwner/cancelled-bookings/${fetchedFlightOwnerId}`,
+          `https://localhost:7275/api/FlightOwner/cancelled-bookings/${fetchedFlightOwnerId}`,
           {
             headers: {
               'Authorization': `Bearer ${localStorage.getItem('authToken')}`,

@@ -37,7 +37,7 @@ const ScheduleRouteForm = () => {
     try {
       // Send POST request to create new route
       const response = await axios.post(
-        "https://localhost:7294/api/FlightOwner/ScheduleRoute", 
+        "https://localhost:7275/api/FlightOwner/ScheduleRoute", 
         formData
       );
 

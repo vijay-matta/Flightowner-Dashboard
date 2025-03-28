@@ -27,7 +27,7 @@ const DeleteRoute = () => {
     try {
       // Use routeId instead of flightId
       await axios.delete(
-        `https://localhost:7294/api/FlightOwner/DeleteRoute/${route.routeId}`
+        `https://localhost:7275/api/FlightOwner/DeleteRoute/${route.routeId}`
       );
       alert("Route deleted successfully.");
       navigate("/view-routes"); // Redirect back to routes list
